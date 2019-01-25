@@ -1,0 +1,45 @@
+{
+    "name": "dalley-it/contao-photoswipe",
+    "description": "Contao modul to easily handle the javascript library photoswipe",
+    "homepage": "https://www.dalley-it.com/blog/contao-photoswipe.html",
+    "support": {
+        "issues": "https://github.com/dalley-it/contao-photoswipe/issues",
+        "source": "https://github.com/dalley-it/contao-photoswipe"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Dalley IT - Oliver Dalley",
+            "homepage": "https://www.dalley-it.com",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "Contao",
+        "photoswipe",
+        "swipe",
+		"gallery"
+    ],
+	"type": "contao-bundle",
+    "require": {
+        "php": ">=7.0"",
+        "contao/core-bundle": "^4.3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dait\\PhotoSwipe\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/",
+            "src/Resources/contao/templates/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Dait\\PhotoSwipe\\ContaoManagerPlugin"
+    }
+}
