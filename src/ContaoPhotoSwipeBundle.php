@@ -23,10 +23,10 @@
  *
  */
 
-namespace Dait\ContaoPhotoswipe;
+namespace Dait\ContaoPhotoSwipe;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ContaoPhotoswipeBundle extends Bundle
+class ContaoPhotoSwipeBundle extends Bundle
 {
 }
