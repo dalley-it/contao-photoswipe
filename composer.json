@@ -40,6 +40,6 @@
         ]
     },
     "extra": {
-        "contao-manager-plugin": "Dait\\PhotoSwipe\\ContaoManagerPlugin"
+        "contao-manager-plugin": "Dait\\PhotoSwipe\\ContaoManager\\Plugin"
     }
 }
