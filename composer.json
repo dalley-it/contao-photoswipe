@@ -25,6 +25,9 @@
         "php": ">=7.0",
         "contao/core-bundle": "^4.3.6"
     },
+    "extra": {
+        "contao-manager-plugin": "Dait\\PhotoSwipe\\ContaoManager\\Plugin"
+    },
     "autoload": {
         "psr-4": {
             "Dait\\PhotoSwipe\\": "src/"
@@ -38,8 +41,5 @@
             "src/Resources/contao/languages/",
             "src/Resources/contao/templates/"
         ]
-    },
-    "extra": {
-        "contao-manager-plugin": "Dait\\PhotoSwipe\\ContaoManager\\Plugin"
     }
 }
