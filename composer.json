@@ -30,7 +30,7 @@
         "contao/manager-plugin": "<2.0 || >=3.0"
     },
     "extra": {
-        "contao-manager-plugin": "Dait\\ContaoPhotoSwipe\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Dait\\ContaoPhotoswipe\\ContaoManager\\Plugin"
     },
     "autoload": {
         "psr-4": {
