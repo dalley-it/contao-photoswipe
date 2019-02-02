@@ -27,6 +27,6 @@ namespace Dait\ContaoPhotoswipe;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class ContaoPhotoSwipeBundle extends Bundle
+class ContaoPhotoswipeBundle extends Bundle
 {
 }
