@@ -23,13 +23,13 @@
  *
  */
  
-namespace Dait\ContaoPhotoSwipe\ContaoManager;
+namespace Dait\DalleyItPhotoSwipe\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Dait\ContaoPhotoSwipe\ContaoPhotoSwipeBundle;
+use Dait\DalleyItPhotoSwipe\DalleyItPhotoSwipeBundle;
 
 class Plugin implements BundlePluginInterface
 {
@@ -39,7 +39,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser)
     {
         return [
-            BundleConfig::create(ContaoPhotoSwipeBundle::class)
+            BundleConfig::create(DalleyItPhotoSwipeBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
