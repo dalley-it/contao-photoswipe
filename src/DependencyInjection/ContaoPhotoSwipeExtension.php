@@ -23,7 +23,7 @@
  *
  */
  
-namespace Dait\ContaoPhotoSwipe\DependencyInjection;
+namespace Dait\DalleyItPhotoSwipe\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -31,7 +31,7 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 
-class ContaoPhotoSwipeExtension extends Extension
+class DalleyItPhotoSwipeExtension extends Extension
 {
     public function load(array $mergedConfig, ContainerBuilder $container)
     {
