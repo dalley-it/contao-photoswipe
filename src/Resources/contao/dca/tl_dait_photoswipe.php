@@ -1,14 +1,14 @@
 <?php
 
 /**
- *    This file is part of the bundle DaitContaoPhotoSwipe.
+ *    This file is part of the bundle DalleyItPhotoSwipe.
  *
- *    The bundle DaitContaoPhotoSwipe is free software: you can redistribute it and/or modify
+ *    The bundle DalleyItPhotoSwipe is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
  *    (at your option) any later version.
  *
- *    The bundle DaitContaoPhotoSwipe is distributed in the hope that it will be useful,
+ *    The bundle DalleyItPhotoSwipe is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
@@ -245,22 +245,21 @@ class tl_dait_photoswipe_options extends Backend
 			$keyboard_access=0;
 		}
 		
-		$content = "var getPhotoSwipeGalleryOptions = function() {
-					var options = {
-					
-					escKey: $escKey_close,
-					closeOnScroll: $scroll_close,
-					bgOpacity: $bg_transp,
-					mouseUsed: $hide_mouse,
-					pinchToClose: $pinch_close,
-					closeOnVerticalDrag: $swipe_close,
-					arrowKeys: $keyboard_access,
-					showAnimationDuration: 0
-					
-					
-					}
-					return options;
-					}";
+		$content = "var getPhotoSwipeGalleryOptions = function() 
+		{
+			var options = 
+			{
+				escKey: $escKey_close,
+				closeOnScroll: $scroll_close,
+				bgOpacity: $bg_transp,
+				mouseUsed: $hide_mouse,
+				pinchToClose: $pinch_close,
+				closeOnVerticalDrag: $swipe_close,
+				arrowKeys: $keyboard_access,
+				showAnimationDuration: 0
+			}
+			return options;
+		}";
 
 		/*
 		$handle = fopen ("../system/modules/dait_photoswipe/assets/js/options/dait_ps_options_$id.js", w);
