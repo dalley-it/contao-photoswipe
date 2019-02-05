@@ -23,19 +23,6 @@
  *
  */
 
-
-/**
- * Back end modules
- */
-$GLOBALS['BE_MOD']['content']['dait_photoswipe'] = array(
-	'tables' => array('tl_dait_photoswipe')
-);
-
-/**
-* Front end modules
-**/
-$GLOBALS['FE_MOD']['dait_photoswipe'] = array
-(
-	'dait_photoswipe'=> 'Dait\PhotoSwipeModule'
-);
+$GLOBALS['BE_MOD']['content']['dait_photoswipe'] = array('tables' => array('tl_dait_photoswipe'));
+$GLOBALS['FE_MOD']['dait_photoswipe'] = array('dait_photoswipe'=> 'Dait\DalleyItPhotoSwipeModule');
 
