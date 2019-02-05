@@ -52,7 +52,7 @@ class tl_dait_photoswipe extends Backend
 	{ 
 		$result = array();
 
-		$obj = $this->Database->prepare("SELECT title, id FROM   tl_dait_photoswipe")->execute();
+		$obj = $this->Database->prepare("SELECT title, id FROM tl_dait_photoswipe")->execute();
 
 		if ($obj->numRows > 0)
 		{
