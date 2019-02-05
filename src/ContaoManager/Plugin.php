@@ -1,7 +1,7 @@
 <?php
 
 /**
- *    This file is part of the bundle DaitContaoPhotoSwipe.
+ *    This file is part of the bundle DalleyItPhotoSwipe.
  *
  *    The bundle DaitContaoPhotoSwipe is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
