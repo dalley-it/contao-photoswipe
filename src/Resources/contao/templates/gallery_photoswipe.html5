@@ -108,6 +108,7 @@
 <link rel="stylesheet" href="bundles/dalleyitphotoswipe/css/photoswipe.css">
 <link rel="stylesheet" href="bundles/dalleyitphotoswipe/css/default-skin.css">
 
+<!--
 <?php
     // load option file if exisits
     if ($this->photoswipe_gallery)
@@ -123,5 +124,7 @@
 	<?php
 	}
 ?>
+-->
+<script src="bundles/dalleyitphotoswipe/js/options/dait_ps_options_standard.js"></script>
 <script src="bundles/dalleyitphotoswipe/js/dait_photoswipe.js"></script>
 
