@@ -261,17 +261,17 @@ class tl_dait_photoswipe_options extends Backend
 			return options;
 		}";
 
-		/*
-		$handle = fopen ("../system/modules/dait_photoswipe/assets/js/options/dait_ps_options_$id.js", w);
+		
+		$handle = fopen ("bundles/dalleyitphotoswipe/js/options/dait_ps_options_$id.js", w);
 		fwrite ($handle, $content);
-        fclose ($handle);
-		*/
+        	fclose ($handle);
+		
 	}
 		
 	public function deletePhotoswipeOptions($dc)
 	{
 		$id = $dc->id;
-		//unlink ("../system/modules/dait_photoswipe/assets/js/options/dait_ps_options_$id.js");
+		unlink ("bundles/dalleyitphotoswipe/js/options/dait_ps_options_$id.js");
 	}
 		
 }
