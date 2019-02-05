@@ -23,7 +23,7 @@
  *
  */
  
-$GLOBALS['TL_LANG']['MOD']['dait_photoswipe'][0] = 'Photoswipe';
+$GLOBALS['TL_LANG']['MOD']['dait_photoswipe'][0] = 'DalleyIt Photoswipe';
 $GLOBALS['TL_LANG']['MOD']['dait_photoswipe'][1] = 'Manage Galleries';
 
 $GLOBALS['TL_LANG']['FMD']['dait_photoswipe'] = 'Photoswipe Gallery';
