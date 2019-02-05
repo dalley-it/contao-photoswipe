@@ -36,6 +36,6 @@ $GLOBALS['BE_MOD']['content']['dait_photoswipe'] = array(
 **/
 $GLOBALS['FE_MOD']['dait_photoswipe'] = array
 (
-		'dait_photoswipe'=> 'Dait\PhotoSwipeModule'
+	'dait_photoswipe'=> 'Dait\PhotoSwipeModule'
 );
 
