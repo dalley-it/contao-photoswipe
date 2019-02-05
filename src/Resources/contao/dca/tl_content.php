@@ -3,12 +3,12 @@
 /**
  *    This file is part of the bundle DalleyItPhotoSwipe.
  *
- *    The bundle DaitContaoPhotoSwipe is free software: you can redistribute it and/or modify
+ *    The bundle DalleyItPhotoSwipe is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
  *    (at your option) any later version.
  *
- *    The bundle DaitContaoPhotoSwipe is distributed in the hope that it will be useful,
+ *    The bundle DalleyItPhotoSwipe is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
@@ -37,35 +37,31 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['gallery'] = str_replace
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['photoswipe_gallery'] = array
 (
-			'label'			=> $GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'],
-			'exclude'		=> true,
-			'inputType'		=> 'select',
-			'options_callback'	=> array('tl_dait_photoswipe' , 'getPhotoswipe'),
-			'eval'			=> array('includeBlankOption'=>true,'tl_class'=>'w50'),
-			'sql'			=> "varchar(64) NOT NULL default ''"
+	'label'			=> $GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'],
+	'exclude'		=> true,
+	'inputType'		=> 'select',
+	'options_callback'	=> array('tl_dait_photoswipe' , 'getPhotoswipe'),
+	'eval'			=> array('includeBlankOption'=>true,'tl_class'=>'w50'),
+	'sql'			=> "varchar(64) NOT NULL default ''"
 );
 
 
 class tl_dait_photoswipe extends Backend
 {
-public function getPhotoswipe()
+	public function getPhotoswipe()
 	{ 
-	$result = array();
+		$result = array();
 
-			$obj = $this->Database
-					->prepare("SELECT title, id  
-							FROM   tl_dait_photoswipe")
-										->execute();
+		$obj = $this->Database->prepare("SELECT title, id FROM   tl_dait_photoswipe")->execute();
 
-	if ($obj->numRows > 0)
+		if ($obj->numRows > 0)
 		{
-		while ($obj->next())
+			while ($obj->next())
 			{
-			$result[$obj->id] = $obj->title;
-			//array_push($result, $obj->title)
+				$result[$obj->id] = $obj->title;
 			}
 		}
-	return $result;
+		return $result;
 	}
 
 }
