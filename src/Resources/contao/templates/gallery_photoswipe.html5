@@ -103,25 +103,25 @@
 ?>
 </ul>
 
-<script src="system/modules/dait_photoswipe/assets/js/photoswipe.min.js"></script>
-<script src="system/modules/dait_photoswipe/assets/js/photoswipe-ui-default.min.js"></script>
-<link rel="stylesheet" href="system/modules/dait_photoswipe/assets/css/photoswipe.css">
-<link rel="stylesheet" href="system/modules/dait_photoswipe/assets/css/default-skin.css">
+<script src="bundles/dalleyitphotoswipe/js/photoswipe.min.js"></script>
+<script src="bundles/dalleyitphotoswipe/js/photoswipe-ui-default.min.js"></script>
+<link rel="stylesheet" href="bundles/dalleyitphotoswipe/css/photoswipe.css">
+<link rel="stylesheet" href="bundles/dalleyitphotoswipe/css/default-skin.css">
 
 <?php
     // load option file if exisits
     if ($this->photoswipe_gallery)
     {
 ?>
-<script src="system/modules/dait_photoswipe/assets/js/options/dait_ps_options_<?= $this->photoswipe_gallery ?>.js"></script>
+<script src="bundles/dalleyitphotoswipe/js/options/dait_ps_options_<?= $this->photoswipe_gallery ?>.js"></script>
 <?php
     }
 	else
 	{
 	?>
-	<script src="system/modules/dait_photoswipe/assets/js/options/dait_ps_options_standard.js"></script>
+	<script src="bundles/dalleyitphotoswipe/js/options/dait_ps_options_standard.js"></script>
 	<?php
 	}
 ?>
-<script src="system/modules/dait_photoswipe/assets/js/dait_photoswipe.js"></script>
+<script src="bundles/dalleyitphotoswipe/js/dait_photoswipe.js"></script>
 
