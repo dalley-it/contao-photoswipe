@@ -1,14 +1,14 @@
 <?php
 
 /**
- *    This file is part of the bundle DaitContaoPhotoSwipe.
+ *    This file is part of the bundle DalleyItPhotoSwipe.
  *
- *    The bundle DaitContaoPhotoSwipe is free software: you can redistribute it and/or modify
+ *    The bundle DalleyItPhotoSwipe is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
  *    (at your option) any later version.
  *
- *    The bundle DaitContaoPhotoSwipe is distributed in the hope that it will be useful,
+ *    The bundle DalleyItPhotoSwipe is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
  *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *    GNU General Public License for more details.
@@ -25,21 +25,19 @@
  
 namespace Dait;
 
-class PhotoSwipeModule extends Module
+class DalleyItPhotoSwipeModule extends Module
 {
-    /**
-     * @var string
-     */
+    	/**
+     	* @var string
+     	*/
 	protected $strTemplate = 'mod_dait_photoswipe';
 
-    /**
-     * Generates the module.
-     */
+    	/**
+     	* Generates the module.
+     	*/
 	protected function compile()
 	{
-		$rs = Database::getInstance()
-			->query('SELECT * FROM tl_dait_photoswipe ORDER BY title');
-
+		$rs = Database::getInstance()->query('SELECT * FROM tl_dait_photoswipe ORDER BY title');
 		$this->Template->dait_photoswipes = $rs->fetchAllAssoc();
 	}		
 }
