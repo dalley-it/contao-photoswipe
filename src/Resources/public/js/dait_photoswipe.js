@@ -97,7 +97,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 // parse slide data (url, title, size ...) from DOM elements 
 // (children of gallerySelector)
 var parseThumbnailElements = function(el) {
-	var thumbElements = el.childNodes,
+	var thumbElements = el.children,
 		numNodes = thumbElements.length,
 		items = [],
 		figureEl,
@@ -107,7 +107,7 @@ var parseThumbnailElements = function(el) {
 
 	for(var i = 0; i < numNodes; i++) {
 
-		figureEl = thumbElements[i]; // <figure> element
+		figureEl = thumbElements[i].children[0]; // <figure> element
 
 		// include only element nodes 
 		if(figureEl.nodeType !== 1) {
@@ -218,12 +218,12 @@ var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) 
 
 //Helper function to open gallery on onclick event from any hyperlink or button
 var openGalleryOnClick = function(galleryId, picId) {
-    var galleryElements = document.querySelectorAll('.my-gallery');
+    var galleryElements = document.querySelectorAll('.dait-ps_gallery');
 	openPhotoSwipe( picId ,  galleryElements[ galleryId - 1 ], true, true );
 	return false;
 };
 
 // execute above function
-initPhotoSwipeFromDOM('.my-gallery');
+initPhotoSwipeFromDOM('.dait-ps_gallery');
 
 
