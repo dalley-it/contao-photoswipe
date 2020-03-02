@@ -66,7 +66,7 @@
         <li class="<?= $class ?> <?= $col->class ?>">
           <figure class="image_container"<?php if ($col->margin): ?> style="<?= $col->margin ?>"<?php endif; ?>>
             <?php if ($col->href): ?>
-              <a href="<?= $col->href ?>" data-size="<?= $col->width ?>x<?= $col->height ?>" <?= $col->attributes ?><?php if ($col->linkTitle) echo ' title="' . $col->linkTitle . '"'; ?>><?php $this->insert('picture_default', $col->picture); ?></a>
+              <a href="<?= $col->href ?>" data-size="<?= $col->width ?>x<?= $col->height ?>"<?php if ($col->linkTitle) echo ' title="' . $col->linkTitle . '"'; ?>><?php $this->insert('picture_default', $col->picture); ?></a>
             <?php else: ?>
               <?php $this->insert('picture_default', $col->picture); ?>
             <?php endif; ?>
