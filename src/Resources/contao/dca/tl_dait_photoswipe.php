@@ -262,7 +262,7 @@ class tl_dait_photoswipe_options extends Backend
 		}";
 
 		
-		$handle = fopen ("bundles/dalleyitphotoswipe/js/options/dait_ps_options_$id.js", w);
+		$handle = fopen ("bundles/dalleyitphotoswipe/js/options/dait_ps_options_$id.js", "w");
 		fwrite ($handle, $content);
         	fclose ($handle);
 		
