@@ -25,176 +25,140 @@
  
 
 
+
+use Contao\DC_Table;
+
 /**
  * Table tl_dait_photoswipe
  */
-$GLOBALS['TL_DCA']['tl_dait_photoswipe'] = array
-(
-	// Config
-	'config' => array
-	(
-		'dataContainer'		=> 'Table',
-		'enableVersioning'	=> true,
-		'sql'				=> array
-		(
-			'keys' => array
-			(
-				'id' => 'primary'
-			)				
-		),
-	),
-	// List
-	'list' => array
-	(
-		/*How to sort*/	
-		'sorting' => array
-		(
-			'mode'			=> 2,
-			'fields'		=> array('title'),
-			'flag'			=> 1,
-			'panelLayout'	=> 'filter;sort,search,limit'
-		),
-		'label' => array
-		(
-			'fields' 	=> array('title'),
-			'format'	=> '%s',
-		),
-		'global_operations' => array
-		(
-			'all' => array
-			(
-				'label'			=> &$GLOBALS['TL_LANG']['MSC']['all'],
-				'href'			=> 'act=select',
-				'class'			=> 'header_edit_all',
-				'attributes'	=> 'onclick="Backend.getScrollOffset()" accesskey="e"'
-			)				
-		),
-		'operations' => array
-		(
-			'edit' => array
-			(
-				'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['edit'],
-				'href'		=> 'act=edit',
-				'icon'		=> 'edit.gif'
-			),
-			'delete' => array
-			(
-				'label'			=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['delete'],
-				'href'			=> 'act=delete',
-				'icon'			=> 'delete.gif',
-				'attributes'	=> 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
-			),
-			'show' => array
-			(
-				'label'			=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['show'],
-				'href'			=> 'act=show',
-				'icon'			=> 'show.gif',
-				'attributes'	=> 'style="margin-right:3px"'
-			),
-		)				
-	),
+$GLOBALS['TL_DCA']['tl_dait_photoswipe'] = [
 
-	// Palettes: fields in backend: {block heading},fieldname;
-	'palettes' => array
-	(
-		'default' => 
-			'{title_legend},title;
-			{style_legend},bg_transp;
-			{mobile_legend},pinch_close,swipe_close;
-			{navigation_legend},keyboard_access,hide_mouse,scroll_close,escKey_close;'
-	),
+    'config' => [
+        'dataContainer' => DC_Table::class,
+        'enableVersioning' => true,
+        'sql' => [
+            'keys' => [
+                'id' => 'primary',
+            ],
+        ],
+    ],
+    
+    'list' => [
+        'sorting' => [
+            'mode' => 2,
+            'fields' => ['title'],
+            'flag' => 1,
+            'panelLayout' => 'filter;sort,search,limit',
+        ],
+        'label' => [
+            'fields' => ['title'],
+            'format' => '%s',
+        ],
+        'global_operations' => [
+            'all' => [
+                'label'	=> &$GLOBALS['TL_LANG']['MSC']['all'],
+                'href' => 'act=select',
+                'class' => 'header_edit_all',
+                'attributes' => 'onclick="Backend.getScrollOffset()" accesskey="e"'
+            ],			
+        ],
+        'operations' => [
+            'edit' => [
+                'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['edit'],
+                'href' => 'act=edit',
+                'icon' => 'edit.gif'
+            ],
+            'delete' => [
+                'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['delete'],
+                'href' => 'act=delete',
+                'icon' => 'delete.gif',
+                'attributes' => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
+            ],
+            'show' => [
+                'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['show'],
+                'href' => 'act=show',
+                'icon' => 'show.gif',
+                'attributes' => 'style="margin-right:3px"'
+            ],
+        ],			
+    ],
 
-	// Fields: fields, that are to be saved in the table (fields declared in 'palettes'-section have to be considered here) 
-	'fields' => array
-	(
-		'id' => array /*incremental ID*/
-		(
-			'sql'		=> "int(10) unsigned NOT NULL auto_increment"
-		),
-		'tstamp' => array /*timestamp, when data is created*/
-		(
-			'sql'		=> "int(10) unsigned NOT NULL default '0'"
-		),
-		'title'	=> array /*fieldname and instructions*/
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['title'],
-			'inputType'	=> 'text',
-			'exclude'	=> true,
-			'sorting'	=> true,
-			'flag'		=> 1,
-			'search'	=> true,
-			'eval'		=> array
-			(
-				'mandatory'	=>true,
-				'unique'	=>true, 
-				'maxlength'	=>255, 
-				'tl_class'	=>'w50'
-			),
-			'sql'		=> "varchar(255) NOT NULL default ''"
-		),
-		'bg_transp' => array /*fieldname and instructions*/               
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['bg_transp'],
-			'inputType'	=> 'text',
-			'exclude'	=> true,
-			'sql'		=> "text NULL",
-			'eval'		=> array
-			(
-				'tl_class'	=>'w50',
-				'rgxp'	=>'prcnt'
-			),
-		),
-		'keyboard_access' => array
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['keyboard_access'],
-			'exclude'	=> true,
-			'inputType'	=> 'checkbox',
-			'eval'		=> array('tl_class'=>'w50'),
-			'sql'		=> "char(1) NOT NULL default ''"
-		),
-		'hide_mouse' => array
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['hide_mouse'],
-			'exclude'	=> true,
-			'inputType'	=> 'checkbox',
-			'eval'		=> array('tl_class'=>'w50'),
-			'sql'		=> "char(1) NOT NULL default ''"
-		),
-		'scroll_close' => array
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['scroll_close'],
-			'exclude'	=> true,
-			'inputType'	=> 'checkbox',
-			'eval'		=> array('tl_class'=>'w50'),
-			'sql'		=> "char(1) NOT NULL default ''"
-		),
-		'pinch_close' => array
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['pinch_close'],
-			'exclude'	=> true,
-			'inputType'	=> 'checkbox',
-			'eval'		=> array('tl_class'=>'w50'),
-			'sql'		=> "char(1) NOT NULL default ''"
-		),
-		'swipe_close' => array
-		(
-			'label'		=> &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['swipe_close'],
-			'exclude'	=> true,
-			'inputType'	=> 'checkbox',
-			'eval'		=> array('tl_class'=>'w50'),
-			'sql'		=> "char(1) NOT NULL default ''"
-		),
-		'escKey_close' => array
-		(
-			'label'     => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['escKey_close'],
-			'exclude'   => true,
-			'inputType'	=> 'checkbox',
-			'eval'      => array('tl_class'=>'w50'),
-			'sql'       => "char(1) NOT NULL default ''"
-		),
-	)
-);
-
+    'palettes' => [
+        'default' => '{title_legend},title;
+            {style_legend},bg_transp;
+            {mobile_legend},pinch_close,swipe_close;
+            {navigation_legend},keyboard_access,hide_mouse,scroll_close,escKey_close;',
+    ],
+    
+    'fields' => [
+        'id' => [
+            'sql' => ['type' => 'integer', 'unsigned' => true, 'autoincrement' => true],
+        ],
+        'tstamp' => [
+            'sql' => ['type' => 'integer', 'unsigned' => true, 'default' => 0],
+        ],
+        'title'	=> [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['title'],
+            'inputType'	=> 'text',
+            'exclude'	=> true,
+            'sorting'	=> true,
+            'flag' => 1,
+            'search' => true,
+            'eval' => ['mandatory' => true, 'unique' => true, 'maxlength' => 255, 'tl_class' =>'w50'],
+            'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
+        ],
+        'bg_transp' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['bg_transp'],
+            'inputType'	=> 'text',
+            'exclude' => true,
+            'eval' => ['tl_class' =>'w50', 'rgxp' =>'prcnt'],
+            'sql' => ['type' => 'string', 'length' => 16, 'default' => ''],
+        ],
+        'keyboard_access' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['keyboard_access'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+        'hide_mouse' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['hide_mouse'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+        'scroll_close' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['scroll_close'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+        'pinch_close' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['pinch_close'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+        'swipe_close' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['swipe_close'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+        'escKey_close' => [
+            'label' => &$GLOBALS['TL_LANG']['tl_dait_photoswipe']['escKey_close'],
+            'exclude' => true,
+            'inputType'	=> 'checkbox',
+            'eval' => ['tl_class'=>'w50'],
+            'sql' => ['type' => 'string', 'length' => 1, 'fixed' => true, 'default' => ''],
+        ],
+    ],
+    
+];
 
 /**
 *Create a file for the options
