@@ -20,10 +20,10 @@
         "swipe",
         "gallery"
     ],
-	"type": "contao-bundle",
+    "type": "contao-bundle",
     "require": {
         "php": ">=7.4",
-        "contao/core-bundle": "^4.13 || ^5.0",
+        "contao/core-bundle": "^4.13 || ^5.0"
     },
     "extra": {
         "contao-manager-plugin": "Dait\\DalleyItPhotoSwipe\\ContaoManager\\Plugin"
@@ -31,6 +31,6 @@
     "autoload": {
         "psr-4": {
             "Dait\\DalleyItPhotoSwipe\\": "src/"
-        },
+        }
     }
 }
