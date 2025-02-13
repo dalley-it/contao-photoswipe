@@ -1,5 +1,4 @@
 <?php
-
 /**
  *    This file is part of the bundle DalleyItPhotoSwipe.
  *
@@ -23,10 +22,16 @@
  *
  */
 
+declare(strict_types=1);
+
 namespace Dait\DalleyItPhotoSwipe;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class DalleyItPhotoSwipeBundle extends Bundle
 {
+    public function getPath(): string
+    {
+        return \dirname(__DIR__);
+    }
 }

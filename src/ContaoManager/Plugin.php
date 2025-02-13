@@ -1,5 +1,4 @@
 <?php
-
 /**
  *    This file is part of the bundle DalleyItPhotoSwipe.
  *
@@ -22,7 +21,9 @@
  *    @copyright   (C) Oliver Dalley - Dalley IT 2020
  *
  */
- 
+
+declare(strict_types=1);
+
 namespace Dait\DalleyItPhotoSwipe\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
