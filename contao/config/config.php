@@ -23,6 +23,8 @@
  *
  */
 
-$GLOBALS['BE_MOD']['content']['dait_photoswipe'] = array('tables' => array('tl_dait_photoswipe'));
-$GLOBALS['FE_MOD']['dait_photoswipe'] = array('dait_photoswipe'=> 'Dait\DalleyItPhotoSwipeModule');
+namespace Dait\DalleyItPhotoSwipe;
+
+$GLOBALS['BE_MOD']['content']['dait_photoswipe'] = ['tables' => ['tl_dait_photoswipe']];
+$GLOBALS['FE_MOD']['dait_photoswipe'] = ['dait_photoswipe'=> 'Dait\DalleyItPhotoSwipeModule'];
 
