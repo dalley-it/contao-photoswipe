@@ -27,6 +27,7 @@
 
 
 use Contao\DC_Table;
+use Contao\Backend;
 
 /**
  * Table tl_dait_photoswipe
