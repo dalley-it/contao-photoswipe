@@ -27,6 +27,7 @@
 * Enables selection of photoswipe gallery template within a contao gallery content element.
 **/
 
+use Contao\Backend;
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['gallery'] = str_replace
 (
