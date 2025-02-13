@@ -27,8 +27,6 @@
 * Enables selection of photoswipe gallery template within a contao gallery content element.
 **/
 
-namespace Dait\DalleyItPhotoSwipe;
-
 use Contao\Backend;
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['gallery'] = str_replace
@@ -40,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['gallery'] = str_replace
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['photoswipe_gallery'] = array
 (
-	'label'			=> $GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'],
+	//'label'			=> $GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'],
 	'exclude'		=> true,
 	'inputType'		=> 'select',
 	'options_callback'	=> array('tl_dait_photoswipe' , 'getPhotoswipe'),
