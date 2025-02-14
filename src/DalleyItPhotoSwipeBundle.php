@@ -14,11 +14,11 @@
  *
  * 
  *    @link        https://www.dalley-it.com
- *    @author      Oliver Dalley - Dalley IT, June 2020
- *    @version     V 1.0.4
+ *    @author      Oliver Dalley - Dalley IT, Feb 2025
+ *    @version     V 2.0.0
  *
  *    @license     http://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
- *    @copyright   (C) Oliver Dalley - Dalley IT 2020
+ *    @copyright   (C) Oliver Dalley - Dalley IT 2018 - 2025
  *
  */
 
