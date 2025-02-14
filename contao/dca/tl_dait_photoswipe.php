@@ -175,7 +175,7 @@ class tl_dait_photoswipe_options extends Backend
 		$id = $dc->id;
 				
 		$bg_transp = $dc->activeRecord->bg_transp;
-		$fullsize_button = $dc->activeRecord->fullsize_button;
+		//$fullsize_button = $dc->activeRecord->fullsize_button;
 		$pinch_close = $dc->activeRecord->pinch_close;
 		$swipe_close = $dc->activeRecord->swipe_close;
 		$keyboard_access = $dc->activeRecord->keyboard_access;
