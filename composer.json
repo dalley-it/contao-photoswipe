@@ -22,8 +22,11 @@
     ],
     "type": "contao-bundle",
     "require": {
-        "php": ">=7.4",
-        "contao/core-bundle": "^4.13 || ^5.0"
+        "php": "^7.4 || ^8.0",
+        "contao/core-bundle": "^4.13 || ^5.3"
+    },
+    "conflict": {
+      "contao/core": "*"
     },
     "extra": {
         "contao-manager-plugin": "Dait\\DalleyItPhotoSwipe\\ContaoManager\\Plugin"
@@ -31,6 +34,12 @@
     "autoload": {
         "psr-4": {
             "Dait\\DalleyItPhotoSwipe\\": "src/"
-        }
+        },
+        "exclude-from-classmap": [
+          "contao/config/",
+          "contao/dca/",
+          "contao/languages/",
+          "contao/templates/"
+        ]
     }
 }
