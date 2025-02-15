@@ -21,27 +21,8 @@
  *    @copyright   (C) Oliver Dalley - Dalley IT 2018 - 2025
  *
  */
+ 
+$GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'][0] = 'Photoswipe Galerie';
+$GLOBALS['TL_LANG']['tl_content']['photoswipe_gallery'][1] = 'Wählen Sie hier die gewünschte Photoswipe Galerie aus, damit die Einstellungen übernommen werden.';
+$GLOBALS['TL_LANG']['tl_content']['photoswipe_legend'] = 'Photoswipe Galerie-Auswahl';
 
-declare(strict_types=1);
-
-namespace Dait\DalleyItPhotoSwipe\ContaoManager;
-
-use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
-use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Dait\DalleyItPhotoSwipe\DalleyItPhotoSwipeBundle;
-
-class Plugin implements BundlePluginInterface
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function getBundles(ParserInterface $parser)
-    {
-        return [
-            BundleConfig::create(DalleyItPhotoSwipeBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
-        ];
-    }
-}

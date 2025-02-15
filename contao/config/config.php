@@ -22,26 +22,8 @@
  *
  */
 
-declare(strict_types=1);
+namespace Dait\DalleyItPhotoSwipe;
 
-namespace Dait\DalleyItPhotoSwipe\ContaoManager;
+$GLOBALS['BE_MOD']['content']['dait_photoswipe'] = ['tables' => ['tl_dait_photoswipe']];
+$GLOBALS['FE_MOD']['dait_photoswipe'] = ['dait_photoswipe'=> 'Dait\DalleyItPhotoSwipeModule'];
 
-use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
-use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Dait\DalleyItPhotoSwipe\DalleyItPhotoSwipeBundle;
-
-class Plugin implements BundlePluginInterface
-{
-    /**
-     * {@inheritdoc}
-     */
-    public function getBundles(ParserInterface $parser)
-    {
-        return [
-            BundleConfig::create(DalleyItPhotoSwipeBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
-        ];
-    }
-}

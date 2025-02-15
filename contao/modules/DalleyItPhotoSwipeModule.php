@@ -21,27 +21,22 @@
  *    @copyright   (C) Oliver Dalley - Dalley IT 2018 - 2025
  *
  */
+ 
+namespace Dait\DalleyItPhotoSwipe;
 
-declare(strict_types=1);
-
-namespace Dait\DalleyItPhotoSwipe\ContaoManager;
-
-use Contao\CoreBundle\ContaoCoreBundle;
-use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
-use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
-use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Dait\DalleyItPhotoSwipe\DalleyItPhotoSwipeBundle;
-
-class Plugin implements BundlePluginInterface
+class DalleyItPhotoSwipeModule extends \Contao\Module
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getBundles(ParserInterface $parser)
-    {
-        return [
-            BundleConfig::create(DalleyItPhotoSwipeBundle::class)
-                ->setLoadAfter([ContaoCoreBundle::class]),
-        ];
-    }
+    	/**
+     	* @var string
+     	*/
+	protected $strTemplate = 'mod_dait_photoswipe';
+
+    	/**
+     	* Generates the module.
+     	*/
+	protected function compile()
+	{
+		$rs = Database::getInstance()->query('SELECT * FROM tl_dait_photoswipe ORDER BY title');
+		$this->Template->dait_photoswipes = $rs->fetchAllAssoc();
+	}		
 }
