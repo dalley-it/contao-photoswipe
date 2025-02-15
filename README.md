@@ -9,5 +9,5 @@ More Information can be found here: <a href="https://www.dalley-it.com/blog/cont
 The bundle dalley-it/contao-photoswipe is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 
 ### Copyright 
-© Dalley IT 2018 - 2020 | 
+© Dalley IT 2018 - 2025 | 
 ```www.dalley-it.com```
